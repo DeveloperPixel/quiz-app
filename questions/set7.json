@@ -1,0 +1,56 @@
+[
+  {
+    "question": "Which of the following is a major challenge in Mobile Cloud Computing?",
+    "options": ["Low demand for mobile applications", "Unlimited local resources in mobile devices", "Network latency and dependency", "Elimination of mobile Internet services"],
+    "answer": "Network latency and dependency",
+    "explanation": "MCC depends heavily on Internet connectivity for cloud access. High latency or poor bandwidth directly impacts user experience and performance."
+  },
+  {
+    "question": "When MCC enables a user to access mobile apps and data from anywhere, it reflects which cloud characteristic?",
+    "options": ["Elasticity", "Location independence", "On-demand self-service", "Resource pooling"],
+    "answer": "Location independence",
+    "explanation": "Location independence means that users can access applications and data from anywhere using the Internet, regardless of the physical location of data centers or devices. MCC leverages this feature to provide seamless access to mobile apps and services."
+  },
+  {
+    "question": "In dynamic routine offloading, the decision of whether to execute a task locally or in the cloud depends primarily on:",
+    "options": ["Fixed pre-programmed instructions in the mobile device", "Real-time context parameters such as network bandwidth, latency, and device battery level", "The number of installed mobile applications", "Cloud provider’s billing cycle"],
+    "answer": "Real-time context parameters such as network bandwidth, latency, and device battery level",
+    "explanation": "Dynamic routine offloading evaluates real-time conditions like current bandwidth availability, latency, energy consumption, CPU load, and task complexity to decide whether execution should remain on the device or move to the cloud."
+  },
+  {
+    "question": "The main purpose of a cloudlet in Mobile Cloud Computing is to:",
+    "options": ["Act as a small-scale data center close to mobile users", "Replace all cloud servers globally", "Increase the storage capacity of mobile devices directly", "Remove the need for wireless connectivity"],
+    "answer": "Act as a small-scale data center close to mobile users",
+    "explanation": "A cloudlet is a small-scale data center located near mobile devices to provide low-latency computation and quick offloading."
+  },
+  {
+    "question": "Which of the following is a major security concern in Mobile Cloud Computing (MCC)?",
+    "options": ["Unlimited battery consumption", "Data confidentiality and privacy during transmission", "Increasing device size", "Lack of mobile applications"],
+    "answer": "Data confidentiality and privacy during transmission",
+    "explanation": "The key security concern in MCC is confidentiality and privacy of data when it is transmitted from mobile devices to the cloud. Attackers may intercept sensitive information like location, banking, or health data."
+  },
+  {
+    "question": "Which of the following is a key advantage of Fog Computing over Cloud Computing?",
+    "options": ["Higher centralization of resources", "Better support for real-time applications like healthcare monitoring and autonomous vehicles", "Infinite storage capacity", "Removal of network infrastructure"],
+    "answer": "Better support for real-time applications like healthcare monitoring and autonomous vehicles",
+    "explanation": "Fog computing supports real-time, delay-sensitive applications by reducing communication delays through local processing. Cloud computing alone suffers from higher latency due to distance from end devices."
+  },
+  {
+    "question": "In Fog Computing, data is usually processed at",
+    "options": ["Central cloud data centers only", "Satellites orbiting the earth", "Only on end-user mobile devices", "Edge devices or intermediate nodes such as routers, gateways, or local servers"],
+    "answer": "Edge devices or intermediate nodes such as routers, gateways, or local servers",
+    "explanation": "Fog computing processes data near the source using edge devices or intermediate nodes, which reduces latency and supports real-time decision-making."
+  },
+  {
+    "question": "Which of the following is a major challenge in processing geospatial datasets in cloud environments?",
+    "options": ["High computational demand and storage requirements for large-scale raster/vector datasets", "The inability of GIS tools to run on cloud platforms", "Elimination of spatial data standards like OGC", "Removal of data visualization tools"],
+    "answer": "High computational demand and storage requirements for large-scale raster/vector datasets",
+    "explanation": "Geospatial datasets (e.g., satellite images, LiDAR, GPS streams) are massive and require high-performance computing, distributed storage, and parallel processing. This makes scalability and optimization in cloud platforms a challenge."
+  },
+  {
+    "question": "In an IoT-enabled smart healthcare system, which combination is most critical to ensure real-time patient monitoring with minimal delay?",
+    "options": ["Cloud computing + Batch processing", "Fog/Edge computing + Low-latency communication (e.g., 5G)", "Local device storage + Periodic manual uploads", "Satellite communication + High latency networks"],
+    "answer": "Fog/Edge computing + Low-latency communication (e.g., 5G)",
+    "explanation": "For real-time IoT applications like healthcare monitoring, fog/edge computing is crucial because it processes data near the source, reducing delays. Coupled with low-latency 5G networks, this ensures immediate response."
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "question": "Which of the following best explains the difference between fog computing and edge computing?",
+    "options": [
+      "Edge computing and fog computing are identical, both referring to processing only at IoT devices.",
+      "Fog computing extends the cloud closer to the edge network, while edge computing processes data strictly within IoT devices or local gateways.",
+      "Edge computing centralizes all computation in the cloud, whereas fog computing distributes computation only in IoT nodes.",
+      "Fog computing supports only data storage, while edge computing provides real-time analytics at the edge."
+    ],
+    "answer": "Fog computing extends the cloud closer to the edge network, while edge computing processes data strictly within IoT devices or local gateways.",
+    "explanation": "Fog computing acts as a layer between edge devices and the cloud, often including routers, gateways, and micro-data centers, thus providing distributed processing. Edge computing happens at the extreme edge (sensors/devices)."
+  },
+  {
+    "question": "A smart traffic light system that must process live video feeds to detect congestion is best suited for:",
+    "options": ["Cloud computing", "Fog computing", "Edge computing", "Traditional client-server model"],
+    "answer": "Fog computing",
+    "explanation": "Edge alone lacks power for real-time video processing, while cloud introduces high latency. Fog nodes (local servers/gateways) balance low latency and higher compute needs."
+  },
+  {
+    "question": "In terms of latency, which order is correct (lowest to highest)?",
+    "options": ["Cloud < Fog < Edge", "Fog < Cloud < Edge", "Edge < Fog < Cloud", "Edge < Cloud < Fog"],
+    "answer": "Edge < Fog < Cloud",
+    "explanation": "Edge: milliseconds (device-level), Fog: low latency (local servers/gateways), Cloud: higher latency (remote data centers)."
+  },
+  {
+    "question": "Which type of scalability is most critical when thousands of IoT devices connect simultaneously to a fog node?",
+    "options": [
+      "Vertical scalability at each fog node",
+      "Horizontal scalability across multiple fog nodes",
+      "Elasticity in the cloud layer only",
+      "Temporal scalability of storage devices"
+    ],
+    "answer": "Horizontal scalability across multiple fog nodes",
+    "explanation": "With many IoT devices, relying on upgrading a single fog node (vertical) is insufficient. Horizontal scalability (adding more fog nodes and distributing load) is essential."
+  },
+  {
+    "question": "Which statement best captures the hierarchical control in fog/edge/cloud computing?",
+    "options": [
+      "Edge devices always control fog and cloud resources.",
+      "Fog nodes provide intermediate decision-making, while the cloud manages global policies and optimization.",
+      "Cloud always directly controls IoT devices without fog involvement.",
+      "Hierarchical control is not required in fog computing."
+    ],
+    "answer": "Fog nodes provide intermediate decision-making, while the cloud manages global policies and optimization.",
+    "explanation": "Fog nodes act locally with autonomy for quick decisions, while the Cloud enforces global orchestration, updates, and optimization policies. This hierarchy ensures both responsiveness and scalability."
+  },
+  {
+    "question": "What is the primary goal of the application placement problem in the Cloud-Fog-Edge framework?",
+    "options": [
+      "To map all applications onto the Cloud servers to maximize computational power.",
+      "To find available resources in the network that satisfy application requirements, respect constraints, and optimize the objective, such as minimizing energy consumption.",
+      "To place all application components on edge devices to ensure low latency.",
+      "To disregard resource capacities and focus solely on network constraints."
+    ],
+    "answer": "To find available resources in the network that satisfy application requirements, respect constraints, and optimize the objective, such as minimizing energy consumption.",
+    "explanation": "Application placement involves mapping components onto infrastructure while considering resource (CPU, RAM), network (latency, bandwidth), and application constraints (locality, delay sensitivity). The goal is to meet constraints and optimize objectives like energy consumption."
+  },
+  {
+    "question": "Which of the following challenges most directly impacts the efficiency of task offloading in mobile edge computing?",
+    "options": [
+      "Unlimited bandwidth between device and edge servers.",
+      "Complete absence of virtualization at the edge.",
+      "Availability of infinite computing power in the cloud.",
+      "Dynamic variability of wireless network conditions and device mobility"
+    ],
+    "answer": "Dynamic variability of wireless network conditions and device mobility",
+    "explanation": "The efficiency of task offloading is affected by fluctuating network bandwidth, latency, and changing device locations, which can impact performance and resource allocation."
+  },
+  {
+    "question": "In the context of cloud federation, what role do brokers play?",
+    "options": [
+      "They act as intermediaries that negotiate, discover, and allocate resources across different CSPs.",
+      "They replace CSPs entirely by owning all infrastructure.",
+      "They prevent interoperability to reduce costs.",
+      "They only monitor usage without affecting service delivery."
+    ],
+    "answer": "They act as intermediaries that negotiate, discover, and allocate resources across different CSPs.",
+    "explanation": "Brokers in cloud federation manage service discovery, negotiate SLAs, and allocate resources across providers. They are key enablers for interoperability and service integration across federated clouds."
+  },
+  {
+    "question": "Which of the following is a major challenge in cloud federation?",
+    "options": [
+      "Unlimited scalability of resources across all CSPs.",
+      "Ensuring SLA compliance, interoperability, and trust across heterogeneous providers.",
+      "Simplified security management due to single-provider dominance.",
+      "Guaranteed uniform pricing models across providers."
+    ],
+    "answer": "Ensuring SLA compliance, interoperability, and trust across heterogeneous providers.",
+    "explanation": "The main challenge in cloud federation is handling heterogeneity (different platforms, policies, pricing, and performance guarantees). Maintaining trust, interoperability, and SLA compliance across multiple providers is complex and critical."
+  },
+  {
+    "question": "Which of the following best describes a Hybrid Cloud Federation?",
+    "options": [
+      "A federation that integrates only public cloud providers into a single pool.",
+      "A federation where only private cloud providers collaborate to enhance scalability.",
+      "A federation where resources from public and private clouds are combined to provide flexible services while maintaining security and control.",
+      "A federation that ignores interoperability and focuses solely on cost optimization."
+    ],
+    "answer": "A federation where resources from public and private clouds are combined to provide flexible services while maintaining security and control.",
+    "explanation": "Hybrid cloud federation combines private and public cloud services, balancing security, compliance, and cost. It allows sensitive workloads to remain in private clouds while leveraging public clouds for scalability."
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Which of the following does not fall(s) under the typical “essential characteristics” of cloud computing?",
+    "options": ["Resource Pooling", "Measured Service", "Rapid Elasticity", "Latency"],
+    "answer": "Latency",
+    "explanation": "Cloud computing is a model for on-demand network access to a shared pool of configurable computing resources that can provide rapid elasticity. It provides automatic control and optimizes resource use by leveraging a metering capability."
+  },
+  {
+    "question": "“Google Docs” app is an example of",
+    "options": ["PaaS", "IaaS", "SaaS", "FaaS"],
+    "answer": "SaaS",
+    "explanation": "Google Docs is a provider’s application that runs on Google Cloud. The application can be accessed from various client terminals through a client interface, such as a web browser. Hence, it is a Software as a Service (SaaS) model."
+  },
+  {
+    "question": "Which of the following is/are public cloud platform(s)?",
+    "options": ["Windows Server Hyper-V", "Google Cloud Interconnect", "Amazon Virtual Private Cloud", "Microsoft Azure"],
+    "answer": ["Google Cloud Interconnect", "Microsoft Azure"],
+    "explanation": "Public cloud is made available to the general public. Examples include Google Cloud and Microsoft Azure."
+  },
+  {
+    "question": "VM technology allows multiple virtual machines to run on a single physical system or on a cluster of physical systems.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "Multiple virtual computers can run on a single physical system thanks to virtualization technologies."
+  },
+  {
+    "question": "A distributed system is typically preferred when the task is: (i) Data-intensive; (ii) Computing-intensive",
+    "options": ["Only (i)", "Only (ii)", "Both (i) and (ii)", "Neither (i) nor (ii)"],
+    "answer": "Both (i) and (ii)",
+    "explanation": "A distributed system is preferred when the task is both data-intensive and computing-intensive."
+  },
+  {
+    "question": "For less data-intensive applications, horizontal scale-out elasticity is the ideal solution.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "explanation": "Horizontal scale-out means adding additional computation units and having them act in concert. It is suitable for large scale-out scenarios, not less data-intensive ones."
+  },
+  {
+    "question": "The combination of Service-Oriented Architecture and Cloud Computing realizes to ________.",
+    "options": ["FTP", "SNTP", "XaaS", "FaaS"],
+    "answer": "XaaS",
+    "explanation": "“Anything as a Service” (XaaS) is a catch-all term for cloud-based services resulting from combining SOA and cloud computing."
+  },
+  {
+    "question": "What is/are the typical requirement(s) of a Cloud Service Provider (CSP)?",
+    "options": ["Increase agility", "Increase cost", "Increase productivity", "Decrease cost"],
+    "answer": ["Increase agility", "Increase productivity"],
+    "explanation": "A CSP focuses on enhancing productivity and agility while reducing operational costs."
+  },
+  {
+    "question": "PaaS (Platform as a Service) brings the benefits: (i) Creation of software (ii) Integration of web services and databases. Select correct option(s):",
+    "options": ["Only (i)", "Only (ii)", "Both (i) and (ii)", "Neither (i) nor (ii)"],
+    "answer": "Both (i) and (ii)",
+    "explanation": "PaaS allows developers to quickly create software or online applications by connecting web services and databases."
+  },
+  {
+    "question": "A __________ is a distributed computer system that consists of a collection of interconnected stand-alone computers working together as an integrated computing resource.",
+    "options": ["Grid", "Cluster", "Cloud", "Node"],
+    "answer": "Cluster",
+    "explanation": "A cluster consists of multiple stand-alone computers working together as an integrated computing resource."
+  }
+]

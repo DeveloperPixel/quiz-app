@@ -1,0 +1,97 @@
+[
+  {
+    "question": "Which migration technique typically results in shorter downtime but may have a longer total migration time?",
+    "options": [
+      "Cold migration",
+      "Pre-copy migration",
+      "Post-copy migration",
+      "Hybrid migration"
+    ],
+    "answer": "Pre-copy migration",
+    "explanation": "Pre-copy reduces downtime since the VM keeps running during iterations, though total migration may be longer."
+  },
+  {
+    "question": "Which migration type is most prone to network failure risks?",
+    "options": [
+      "Pre-copy migration",
+      "Post-copy migration",
+      "Hybrid migration",
+      "Cold migration"
+    ],
+    "answer": "Post-copy migration",
+    "explanation": "If a failure occurs after the destination VM starts execution in Post-copy, incomplete memory state may cause VM crash."
+  },
+  {
+    "question": "Which migration technique is more energy-efficient in fog computing?",
+    "options": [
+      "Pre-copy",
+      "Post-copy",
+      "Hybrid migration",
+      "Cold migration"
+    ],
+    "answer": "Hybrid migration",
+    "explanation": "Hybrid migration balances bandwidth, downtime, and energy usage, making it more efficient for fog computing scenarios."
+  },
+  {
+    "question": "In cloud platforms (like AWS, GCP, Azure), Docker Engine is primarily responsible for:",
+    "options": [
+      "Automatically scaling container clusters",
+      "Running and managing individual containers on VM instances",
+      "Replacing Kubernetes for container orchestration",
+      "Providing multi-cloud identity management"
+    ],
+    "answer": "Running and managing individual containers on VM instances",
+    "explanation": "Docker Engine runs on VM instances to manage containers. Scaling and orchestration are handled by Kubernetes, ECS, AKS, or GKE, not Docker Engine alone."
+  },
+  {
+    "question": "The central service that stores and distributes Docker images is called ___________.",
+    "options": ["Docker Swarm", "Docker Hub", "Docker Engine", "Docker Daemon"],
+    "answer": "Docker Hub",
+    "explanation": "Docker Hub (or a private registry) is used to store and share images. Swarm is for orchestration, Engine is the runtime, Daemon manages containers locally."
+  },
+  {
+    "question": "Docker volumes are deleted automatically when the container using them is removed.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "explanation": "By default, Docker does not delete volumes when containers are removed, to prevent accidental data loss. Volumes must be explicitly removed using docker volume rm."
+  },
+  {
+    "question": "Statement 1: Docker networking allows containers to communicate with each other and the host.\nStatement 2: By default, containers are launched in host network mode.",
+    "options": [
+      "Only statement 1 is true",
+      "Only statement 2 is true",
+      "Both statement 1 and 2 are true",
+      "Both the statements are false"
+    ],
+    "answer": "Only statement 1 is true",
+    "explanation": "Docker provides multiple networking modes (bridge, host, overlay, none). Default is bridge mode, not host mode. So statement 1 is true, statement 2 is false."
+  },
+  {
+    "question": "During live migration, storage migration is required if:",
+    "options": [
+      "Both source and destination hosts use shared storage",
+      "Destination host has faster CPU",
+      "Destination host does not have access to the VM’s disk",
+      "Migration occurs within the same physical server"
+    ],
+    "answer": "Destination host does not have access to the VM’s disk",
+    "explanation": "If the destination host cannot access the same disk (no shared storage), storage migration must occur along with memory and CPU state migration. Otherwise, the VM won’t have its files available at the destination."
+  },
+  {
+    "question": "By default, Docker pulls all images from a private registry.",
+    "options": ["True", "False"],
+    "answer": "False",
+    "explanation": "By default, Docker pulls images from the public Docker Hub registry. To pull from a private registry, Docker must be configured with the registry’s URL and authentication credentials (username/password or tokens)."
+  },
+  {
+    "question": "If a VM has 128 GB memory and the migration channel supports 4 MB/sec, what is the total migration time and downtime for non-live VM migration?",
+    "options": [
+      "8 hours, 8 hours",
+      "9 hours, 9 hours",
+      "10 hours, 10 hours",
+      "11 hours, 11 hours"
+    ],
+    "answer": "9 hours, 9 hours",
+    "explanation": "Migration time = (128 × 2^30 bytes) / (4 × 2^20 bytes/sec) = 32768 seconds ≈ 9.1 hours ≈ 9 hours. For non-live migration, downtime equals total migration time."
+  }
+]

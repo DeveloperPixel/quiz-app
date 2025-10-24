@@ -1,0 +1,72 @@
+[
+  {
+    "question": "In Azure SQL Database, which of the following provides built-in geo-replication and is designed for mission-critical workloads?",
+    "options": ["Basic Tier", "Business Critical Tier", "Hyperscale Tier", "Standard Tier"],
+    "answer": "Business Critical Tier",
+    "explanation": "Business Critical tier includes high IOPS, low latency, and built-in geo-replication, making it suitable for critical applications."
+  },
+  {
+    "question": "You have 2 VMs in different Azure Availability Zones in the same region. Which of the following is true about the setup?",
+    "options": ["They are not protected against data center failure", "They share the same power source", "They are in separate physical locations", "They cannot communicate over a private IP"],
+    "answer": "They are in separate physical locations",
+    "explanation": "Availability Zones are physically separate locations within a region, providing redundancy and high availability."
+  },
+  {
+    "question": "What is the maximum number of deployment slots available in the Azure App Service Premium plan (P1v3 and higher)?",
+    "options": ["2", "5", "20", "10"],
+    "answer": "20",
+    "explanation": "Premium plans (P1v3 or higher) support up to 20 deployment slots, enabling advanced CI/CD workflows with multiple testing environments."
+  },
+  {
+    "question": "Which built-in security feature helps automatically enforce HTTPS connections for all Azure App Service web apps?",
+    "options": ["Azure Firewall", "Application Gateway", "HTTPS Only setting", "Azure Key Vault"],
+    "answer": "HTTPS Only setting",
+    "explanation": "App Service includes a setting called 'HTTPS Only', which forces all HTTP requests to be redirected to HTTPS to ensure secure communication."
+  },
+  {
+    "question": "Which GCP service is best suited for hosting a NoSQL database with horizontal scalability and global replication?",
+    "options": ["Cloud SQL", "BigQuery", "Cloud Spanner", "Firestore"],
+    "answer": "Firestore",
+    "explanation": "Firestore is a fully managed, serverless NoSQL document database, ideal for scalable web and mobile apps, with global replication and real-time syncing."
+  },
+  {
+    "question": "The OpenStack service responsible for block storage is called _______.",
+    "options": ["Horizon", "Cinder", "Neutron", "Swift"],
+    "answer": "Cinder",
+    "explanation": "Cinder provides persistent block storage for virtual machines, similar to a virtual hard drive."
+  },
+  {
+    "question": "________ is the GCP service that helps manage Kubernetes clusters.",
+    "options": ["Cloud Functions", "App Engine", "GKE", "Cloud Build"],
+    "answer": "GKE",
+    "explanation": "GKE is GCP’s managed Kubernetes service to deploy, manage, and scale containerized applications."
+  },
+  {
+    "question": "You are designing a multi-region data analytics pipeline on GCP. You want to ensure durable, low-latency storage for massive structured logs and provide real-time dashboarding and alerts. What is the best set of GCP services to use?",
+    "options": [
+      "Cloud Storage + Dataflow + Looker",
+      "Bigtable + Pub/Sub + Cloud Monitoring",
+      "Firestore + Data Studio + Cloud Functions",
+      "BigQuery + Pub/Sub + Data Studio"
+    ],
+    "answer": "BigQuery + Pub/Sub + Data Studio",
+    "explanation": "Pub/Sub ingests real-time logs. BigQuery stores large structured data with near real-time query performance. Data Studio connects directly with BigQuery to provide dashboards. Bigtable is not suited for ad-hoc queries, and Firestore is not optimized for analytics."
+  },
+  {
+    "question": "You deploy two versions (v1,v2) of your App Engine service. You want 70% of traffic to go to v1 and 30% to v2. Which command should you use?",
+    "options": [
+      "gcloud app deploy --split-traffic=70:v1,30:v2",
+      "gcloud app services set-traffic --splits v1=0.7,v2=0.3",
+      "gcloud app versions set-traffic --service=default --splits=0.7:v1,0.3:v2",
+      "gcloud app set-traffic --splits=v1:70,v2:30"
+    ],
+    "answer": "gcloud app services set-traffic --splits v1=0.7,v2=0.3",
+    "explanation": "To split traffic between versions of an App Engine service, use gcloud app services set-traffic with the --splits flag. The values must be fractions between 0 and 1, not percentages."
+  },
+  {
+    "question": "A tenant in OpenStack complains that their VMs can't reach the internet. What is the MOST LIKELY root cause?",
+    "options": ["Glance image is corrupted", "Neutron router not configured", "Nova scheduler is down", "Heat orchestration failed"],
+    "answer": "Neutron router not configured",
+    "explanation": "Without a Neutron router, tenant subnets can't get external network access."
+  }
+]

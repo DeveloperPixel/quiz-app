@@ -1,0 +1,62 @@
+[
+  {
+    "question": "In an SLA agreement, a cloud provider promises 98.5% availability. An application runs X hours per day. Over a 30-day month, the total downtime was 11 hours. The SLA is still considered honored. What is the minimum possible value of X?",
+    "options": ["X is at least 24.44", "X is at most 24.44", "X is exactly 24.44", "Insufficient data"],
+    "answer": "X is at least 24.44",
+    "explanation": "Total time for which the application will run (in a month) = X×30 hours. Outage time = 11 hours. Availability ≥ 98.5%, solving (1−11/30X) × 100 ≥ 98.5 gives X ≥ 24.44 hours/day."
+  },
+  {
+    "question": "In a multi-core system, increasing the number of active CPU cores will generally lead to:",
+    "options": ["A decrease in power consumption", "A constant power consumption", "An increase in power consumption", "No effect on power consumption"],
+    "answer": "An increase in power consumption",
+    "explanation": "Power consumption increases as more cores are activated. Although energy-efficient scheduling can optimize this, more cores typically consume more power linearly."
+  },
+  {
+    "question": "Which economic factor is most impacted when moving from on-premise to cloud infrastructure?",
+    "options": ["Taxation", "Labor productivity", "Capital expenditure", "Bandwidth consumption"],
+    "answer": "Capital expenditure",
+    "explanation": "One of the main economic shifts in moving to the cloud is the reduction or elimination of capital expenditure (CapEx). Organizations switch to an operational expenditure (OpEx) model, leasing resources as needed from a cloud provider."
+  },
+  {
+    "question": "In the Hadoop MapReduce framework, consider the HDFS block size is 64 MB. You have 3 files with the sizes: 64 KB, 65 MB and 127 MB. How many physical HDFS blocks will be created by the Hadoop framework to store these files?",
+    "options": ["9", "15", "6", "8"],
+    "answer": "15",
+    "explanation": "Logical blocks: File 1 → 1, File 2 → 2, File 3 → 2; total 5. With replication factor 3, total physical blocks = 5 × 3 = 15."
+  },
+  {
+    "question": "Which of the following best represents a logical resource in a virtualized environment?",
+    "options": ["Virtual Machine", "Hard Disk", "RAM", "Network Cable"],
+    "answer": "Virtual Machine",
+    "explanation": "A Virtual Machine (VM) is a logical abstraction over physical hardware. It behaves like a separate computer but is created and managed by a hypervisor."
+  },
+  {
+    "question": "Which optional MapReduce component helps in reducing the volume of data transferred to the Reducer?",
+    "options": ["Partitioner", "Combiner", "RecordReader", "OutputFormat"],
+    "answer": "Combiner",
+    "explanation": "The Combiner acts like a mini-Reducer that performs local aggregation on Mapper output, reducing the amount of data transferred across the network during the shuffle phase."
+  },
+  {
+    "question": "In virtualized environments, the software layer that allows multiple VMs to share physical hardware is the __________.",
+    "options": ["Allocator", "Orchestrator", "Container", "Hypervisor"],
+    "answer": "Hypervisor",
+    "explanation": "The hypervisor (also called Virtual Machine Monitor) is the core component that virtualizes hardware, enabling multiple VMs to run on a single physical host with isolation and control."
+  },
+  {
+    "question": "Which scheduling strategy in cloud resource management aims to reduce the number of physical machines used, without violating performance constraints?",
+    "options": ["Round-robin scheduling", "Energy-aware scheduling", "Priority-based scheduling", "First-come-first-serve"],
+    "answer": "Energy-aware scheduling",
+    "explanation": "Energy-aware scheduling attempts to minimize energy consumption by consolidating tasks or VMs on fewer physical nodes, ensuring performance is still maintained."
+  },
+  {
+    "question": "Statement 1: Economies of scale in cloud computing lead to reduced costs per unit as the scale increases. Statement 2: Cloud providers pass all savings from economies of scale directly to individual users.",
+    "options": ["Both statements are true", "Both statements are false", "Statement 1 is true and Statement 2 is false", "Statement 1 is false and Statement 2 is true"],
+    "answer": "Statement 1 is true and Statement 2 is false",
+    "explanation": "Cloud providers benefit from economies of scale and lower the unit cost of computing. While users benefit indirectly, providers do not necessarily pass all savings directly to users—pricing remains strategic."
+  },
+  {
+    "question": "Average resource demand is 50 units, Baseline (owned) unit cost is 100 units, Time is 10 hours, Peak resource demand is 120 units. What is the maximum allowable utility premium (U) if the cloud cost must be less than owning cost?",
+    "options": ["2.4", "2.0", "1.8", "3.0"],
+    "answer": "2.4",
+    "explanation": "CT < BT implies A * U < P, where A=Average Demand, U=Utility Premium, P=Peak Demand. U < 120/50 = 2.4. So utility premium must be less than 2.4."
+  }
+]

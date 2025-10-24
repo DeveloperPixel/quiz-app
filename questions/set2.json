@@ -1,0 +1,77 @@
+[
+  {
+    "question": "What is/are the main difference(s) between virtualization and dual boot?",
+    "options": [
+      "No difference between dual boot and virtualization.",
+      "In virtualization, operating systems are not isolated from each other, but not in dual boot.",
+      "In a dual boot, both operating systems run simultaneously, but not in virtualization.",
+      "In virtualization, both operating systems run simultaneously, but not in dual boot."
+    ],
+    "answer": "In virtualization, both operating systems run simultaneously, but not in dual boot.",
+    "explanation": "Virtualization is a method of running multiple operating systems and user applications on the same hardware. Both OSs run simultaneously and are completely isolated from each other."
+  },
+  {
+    "question": "Ubuntu Enterprise Cloud (UEC) is an example of",
+    "options": ["Private cloud", "Public cloud", "Hybrid cloud", "Community Cloud"],
+    "answer": "Private cloud",
+    "explanation": "Ubuntu Enterprise Cloud (UEC) is an example of a private cloud."
+  },
+  {
+    "question": "Organization should consider (i) Network Dependency and (ii) Risks from multi-tenancy while thinking of deploying an outsourced private cloud.",
+    "options": ["Only (i) is true", "Only (ii) is true", "Both (i) and (ii) are true", "None of (i) and (ii) are true"],
+    "answer": "Both (i) and (ii) are true",
+    "explanation": "For outsourced private cloud, subscribers may have an option to provide a unique, protected, and reliable network. Additionally, there is always a risk of multi-tenancy."
+  },
+  {
+    "question": "Which of the following is/are XML parser API(s)?",
+    "options": [
+      "XaaS (Anything as a Model)",
+      "DOM (Document Object Model)",
+      "CLI (Command Line Interface)",
+      "SLA (Service Level Agreement)"
+    ],
+    "answer": "DOM (Document Object Model)",
+    "explanation": "DOM is one of the three generic parser APIs. It reads in XML data, checks for syntax, and makes data available to an application."
+  },
+  {
+    "question": "The public cloud has a risk of multi-tenancy.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "There is a possibility that a subscriber’s workload may be co-resident with the workloads of competitors, posing reliability and security risks."
+  },
+  {
+    "question": "In cloud computing, the Hypervisor is also known as",
+    "options": ["Cluster Manager", "Virtual Machine Handler", "Virtual Machine Manager", "Virtual Machine Monitor"],
+    "answer": "Virtual Machine Monitor",
+    "explanation": "The hypervisor is also known as a Virtual Machine Monitor."
+  },
+  {
+    "question": "Speed and flexibility are the two disadvantages of hardware-assisted virtualization.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "An unmodified OS cannot take advantage of any of the underlying features of virtualization. Hence, speed and flexibility become disadvantages."
+  },
+  {
+    "question": "The following problems are addressed through Web services: 1. Firewall 2. Interoperability 3. Complexity 4. Speed",
+    "options": ["Firewall", "Interoperability", "Complexity", "Speed"],
+    "answer": ["Firewall", "Interoperability", "Complexity"],
+    "explanation": "Web services improve distributed interoperability by using open standards that enable software components to communicate and handle firewall issues."
+  },
+  {
+    "question": "A web service can be discovered using",
+    "options": ["SMS", "HTTP", "SMTP", "UDDI"],
+    "answer": "UDDI",
+    "explanation": "A web service is an application component that can be discovered using UDDI (Universal Description, Discovery, and Integration)."
+  },
+  {
+    "question": "Service-Oriented Architecture (SOA) consists of relationships between:",
+    "options": [
+      "Two entities (a service provider and a requestor)",
+      "Two entities (a service provider and a broker)",
+      "Three entities (a service provider, a service requestor, and a broker)",
+      "Three entities (a service provider, a service requestor, and a hypervisor)"
+    ],
+    "answer": "Three entities (a service provider, a service requestor, and a broker)",
+    "explanation": "Service-Oriented Architecture (SOA) consists of relationships between three entities — a service provider, a service requestor, and a broker."
+  }
+]

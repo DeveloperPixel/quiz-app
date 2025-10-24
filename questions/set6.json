@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Modification of data in transit is considered as an attack on",
+    "options": ["Confidentiality", "Integrity", "Availability", "Authenticity"],
+    "answer": "Integrity",
+    "explanation": "Modification refers to the unauthorized alteration of data. When data is changed during transmission, the original content is no longer intact. This violates integrity, which ensures that data is accurate and unchanged from its original form."
+  },
+  {
+    "question": "A phishing attack is mainly an attack on",
+    "options": ["Confidentiality", "Availability", "Integrity", "Authenticity"],
+    "answer": "Authenticity",
+    "explanation": "Phishing tricks users into revealing personal or sensitive information by pretending to be a legitimate entity. This attack violates authenticity, which ensures that users and systems are who they claim to be."
+  },
+  {
+    "question": "Which of the following attacks is NOT passive?",
+    "options": ["Eavesdropping", "Snooping", "Masquerading", "Traffic Analysis"],
+    "answer": "Masquerading",
+    "explanation": "Masquerading involves impersonating an authorized user to gain access to resources. This is an active attack because the attacker is interacting with and manipulating the system. The others are passive—they involve observing without interfering."
+  },
+  {
+    "question": "Denial-of-Service (DoS) is an example of",
+    "options": ["Disruption", "Disclosure", "Usurpation", "Deception"],
+    "answer": "Disruption",
+    "explanation": "A DoS attack interrupts or degrades the normal service of a system, hence it is a case of disruption."
+  },
+  {
+    "question": "Which step involves actively testing systems for security weaknesses?",
+    "options": ["Reconnaissance", "Vulnerability scanning", "Penetration testing", "Post-attack investigation"],
+    "answer": "Penetration testing",
+    "explanation": "Penetration testing simulates real attacks to exploit vulnerabilities and assess the actual security posture of the system."
+  },
+  {
+    "question": "Reconnaissance in network security is the phase where attackers or testers collect information about the target system.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "Reconnaissance is an information-gathering step, often the first step attackers use to learn about a system before attempting an attack."
+  },
+  {
+    "question": "Statement I: Authentication is the process of verifying the identity of a user or system. Statement II: Non-repudiation ensures that a sender cannot deny sending a message.",
+    "options": ["Statement I is TRUE and Statement II is FALSE", "Statement I is FALSE and Statement II is TRUE", "Both statements are TRUE", "Both statements are FALSE"],
+    "answer": "Both statements are TRUE",
+    "explanation": "Authentication checks the validity of user/system identity, while non-repudiation ensures accountability by preventing denial of message origin. Both statements are true."
+  },
+  {
+    "question": "A company develops a custom machine learning model. They want full control over the operating system, runtime libraries, and storage but do not want to manage physical servers, power, or networking. Which cloud service model best suits their needs?",
+    "options": ["SaaS", "IaaS", "PaaS", "DaaS"],
+    "answer": "IaaS",
+    "explanation": "Since the company wants to control OS, libraries, and storage while offloading management of hardware, networking, and facilities, IaaS is the right choice. PaaS would abstract away OS/runtime control, and SaaS would only provide finished applications."
+  },
+  {
+    "question": "A healthcare company must follow HIPAA guidelines when storing patient data in the cloud. This is an example of which security risk?",
+    "options": ["Regulatory Compliance & Audit", "Data Location", "Recovery", "Investigative Support"],
+    "answer": "Regulatory Compliance & Audit",
+    "explanation": "Regulatory compliance & audit ensures that cloud providers and customers adhere to laws (like HIPAA, GDPR)."
+  },
+  {
+    "question": "Vendor lock-in is most directly associated with which long-term viability challenge?",
+    "options": ["Difficulty in migrating data to another provider", "Unauthorized data disclosure", "Increased regulatory audits", "Privileged user misuse"],
+    "answer": "Difficulty in migrating data to another provider",
+    "explanation": "Vendor lock-in makes it hard for customers to migrate applications and data due to proprietary formats, APIs, or integrations."
+  }
+]

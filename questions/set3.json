@@ -1,0 +1,102 @@
+[
+  {
+    "question": "What does a cloud SLA typically NOT include?",
+    "options": [
+      "Availability guarantee",
+      "Encryption algorithm details",
+      "Performance metrics",
+      "Penalty clauses"
+    ],
+    "answer": "Encryption algorithm details",
+    "explanation": "Cloud SLAs focus on service delivery—not on low-level implementation details like encryption algorithms, which are part of security documentation."
+  },
+  {
+    "question": "A multilevel SLA includes which of the following?",
+    "options": [
+      "Only service-specific agreements",
+      "Multiple SLAs signed by different providers",
+      "Corporate, customer, and service levels",
+      "Only client-specific requirements"
+    ],
+    "answer": "Corporate, customer, and service levels",
+    "explanation": "A multilevel SLA is structured to address various levels: corporate-wide, customer-specific, and service-specific."
+  },
+  {
+    "question": "Which of the following is a typical metric included in a cloud SLA?",
+    "options": [
+      "Customer's project schedule",
+      "Developer salary",
+      "Uptime percentage",
+      "IP address of the cloud provider"
+    ],
+    "answer": "Uptime percentage",
+    "explanation": "Common SLA metrics include uptime, response time, and availability. Uptime percentage (e.g., 99.99%) is a standard clause in most cloud SLAs."
+  },
+  {
+    "question": "Which of the following statements is TRUE regarding Cloud and Web Service SLAs?",
+    "options": [
+      "Cloud SLAs cannot apply to SaaS applications",
+      "Web Service SLAs are only applicable to internal systems",
+      "Web Service SLAs are narrower in scope than Cloud SLAs",
+      "Cloud SLAs are always written by customers, not providers"
+    ],
+    "answer": "Web Service SLAs are narrower in scope than Cloud SLAs",
+    "explanation": "Web Service SLAs are usually limited to application-level services (e.g., a weather API), whereas Cloud SLAs often cover a broader spectrum of services including infrastructure, platforms, and applications."
+  },
+  {
+    "question": "A cloud service is guaranteed to handle 10,000 requests/hour with 99.5% success. How many failed requests per hour are acceptable under SLA?",
+    "options": ["5", "10", "50", "500"],
+    "answer": "50",
+    "explanation": "Success rate = 99.5%, so failure rate = 0.5%. 0.5% of 10,000 = (0.5/100) × 10,000 = 50. So, 50 failed requests/hour."
+  },
+  {
+    "question": "Which characteristic is most unique to parallel databases and not shared with traditional relational databases in cloud environments?",
+    "options": [
+      "Support for SQL",
+      "Multi-node distributed query execution",
+      "Transaction rollback",
+      "Normalized schema usage"
+    ],
+    "answer": "Multi-node distributed query execution",
+    "explanation": "Traditional RDBMS supports SQL, transactions, and normalization, but not multi-node query execution. That’s a parallel DB feature, critical in cloud-scale analytics (e.g., Redshift, BigQuery)."
+  },
+  {
+    "question": "You are designing a big data pipeline that processes video files using a cloud-native distributed file system. Which of the following choices is most suitable for scalable storage and parallel processing?",
+    "options": [
+      "Amazon Aurora",
+      "Google Cloud Storage (with Hadoop connector)",
+      "AWS Lambda",
+      "Azure SQL Database"
+    ],
+    "answer": "Google Cloud Storage (with Hadoop connector)",
+    "explanation": "Google Cloud Storage (GCS), when used with a Hadoop connector, acts like a distributed file system. It integrates with Apache Spark/Hadoop and is well-suited for parallel processing of large files like videos."
+  },
+  {
+    "question": "Which of the following is not supported in MapReduce-based systems for iterative algorithms like machine learning or graph processing?",
+    "options": [
+      "Data must be reloaded from disk in each iteration",
+      "Mappers and reducers cannot share memory between iterations",
+      "It supports pipelined execution between stages",
+      "High overhead due to repeated job initialization"
+    ],
+    "answer": "It supports pipelined execution between stages",
+    "explanation": "MapReduce systems are not optimized for iterative algorithms like machine learning because they reload data from disk in each iteration, lack shared memory between tasks, and incur high overhead from repeated job initialization. The claim that MapReduce supports pipelined execution is incorrect."
+  },
+  {
+    "question": "A MapReduce job is processing 1 TB of input data. The “map” output is 500 GB, and the final “reduce” output is 50 GB. If the shuffle and sort phase fails due to insufficient disk I/O, which phase is affected and why?",
+    "options": [
+      "Map phase, because it processes raw data",
+      "Reduce phase, because it merges map outputs",
+      "Input split phase, because files are not split",
+      "Combiner phase, because data isn’t reduced locally"
+    ],
+    "answer": "Reduce phase, because it merges map outputs",
+    "explanation": "The shuffle and sort phase occurs between Map and Reduce phases and involves sorting and transferring data from mappers to reducers. If disk I/O is insufficient, the reduce phase fails because it depends on sorted intermediate key-value pairs."
+  },
+  {
+    "question": "In an OpenStack deployment, if a compute node can support up to 100 virtual CPUs (vCPUs), and the overcommit ratio for CPU is set to 1.5:1, what is the total number of vCPUs that can be allocated?",
+    "options": ["100", "150", "66", "200"],
+    "answer": "150",
+    "explanation": "OpenStack allows overcommitment of compute resources. Total Allocatable vCPUs = Physical vCPUs × Overcommit Ratio → 100 × 1.5 = 150 vCPUs."
+  }
+]

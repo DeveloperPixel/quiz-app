@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Which command is used to list all running Docker containers?",
+    "options": ["docker images", "docker ps", "docker run", "docker exec"],
+    "answer": "docker ps",
+    "explanation": "Docker ps displays all running containers with details like container ID, name, image, and status. To see all containers (running + stopped), use docker ps -a."
+  },
+  {
+    "question": "Which of the following is true about Docker volumes?",
+    "options": ["They are temporary and deleted with the container.", "They persist data independently of containers.", "They cannot be shared between containers.", "They are used only for logging."],
+    "answer": "They persist data independently of containers.",
+    "explanation": "Docker volumes provide persistent storage. Even if a container is removed, the volume remains and can be attached to other containers."
+  },
+  {
+    "question": "Which of the following statements is TRUE?",
+    "options": ["A VM can run multiple containers inside it", "A container can run multiple VMs inside it", "VMs and containers cannot run together", "Containers require hardware virtualization support"],
+    "answer": "A VM can run multiple containers inside it",
+    "explanation": "A Virtual Machine can host a full OS, which can run container engines (like Docker). Containers cannot host VMs."
+  },
+  {
+    "question": "Kubernetes is primarily used for:",
+    "options": ["Hypervisor management", "Container orchestration", "VM migration", "Hardware virtualization"],
+    "answer": "Container orchestration",
+    "explanation": "Kubernetes automates deployment, scaling, and management of containerized applications."
+  },
+  {
+    "question": "__________ is an example of a Type 1 (bare-metal) hypervisor that runs directly on the hardware without needing a host OS.",
+    "options": ["VMware ESXi", "VirtualBox", "Docker", "LXC"],
+    "answer": "VMware ESXi",
+    "explanation": "VMware ESXi is a Type 1 hypervisor that runs directly on hardware (bare-metal). VirtualBox is Type 2, while Docker and LXC are containerization tools."
+  },
+  {
+    "question": "In Green Cloud architecture, which scheduling strategy would most likely help minimize energy waste?",
+    "options": ["Round Robin Scheduling", "First Come First Serve (FCFS)", "Energy-Aware VM Consolidation", "Randomized Load Distribution"],
+    "answer": "Energy-Aware VM Consolidation",
+    "explanation": "Energy-Aware VM Consolidation places workloads on fewer physical servers when possible, turning idle servers off to save power — a key strategy in Green Cloud computing."
+  },
+  {
+    "question": "In a Sensor Cloud, which of the following is the biggest challenge when integrating Wireless Sensor Networks (WSNs) with cloud computing?",
+    "options": ["Lack of virtualization support in sensors", "High energy efficiency of WSN nodes", "Limited storage requirements of sensors", "Sensors are always fault-tolerant"],
+    "answer": "Lack of virtualization support in sensors",
+    "explanation": "Sensors typically have low computational power and cannot directly support virtualization, making integration with the cloud difficult. Middleware is required to connect WSNs with cloud services."
+  },
+  {
+    "question": "In an IoT Cloud system, latency-critical applications (like autonomous driving) are difficult to support directly from the cloud because:",
+    "options": ["IoT devices cannot transmit data wirelessly", "Cloud servers are usually located far from the devices", "IoT Cloud systems do not use virtualization", "The cloud cannot store IoT data at large scale"],
+    "answer": "Cloud servers are usually located far from the devices",
+    "explanation": "The distance between IoT devices and centralized cloud servers introduces high latency, which is critical for time-sensitive applications."
+  },
+  {
+    "question": "Which of the following is the biggest challenge in storing raw sensor data directly in the cloud?",
+    "options": ["Low redundancy of sensor data", "High volume, velocity, and heterogeneity of sensor data", "Lack of virtualization in the cloud", "Inability of cloud to support batch processing"],
+    "answer": "High volume, velocity, and heterogeneity of sensor data",
+    "explanation": "Sensor data is massive, arrives at high speed, and is heterogeneous (different formats, units, protocols). Direct storage without preprocessing overwhelms the cloud."
+  },
+  {
+    "question": "Statement 1: In Sensor Cloud, virtualization of sensor data allows multiple applications to use the same physical sensor infrastructure.\nStatement 2: Without virtualization, each application would require a dedicated sensor network, increasing cost and inefficiency.",
+    "options": ["Statement 1 is True and Statement 2 is False", "Statement 2 is True and Statement 1 is False", "Both statements are True", "Both statements are False"],
+    "answer": "Both statements are True",
+    "explanation": "Sensor Cloud employs virtualization to abstract physical sensors into virtual sensors. This enables sharing across multiple users/applications, reducing redundancy and costs."
+  }
+]

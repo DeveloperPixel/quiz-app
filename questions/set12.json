@@ -1,0 +1,112 @@
+[
+  {
+    "question": "In a Spatial Cloud Computing environment, which service characteristic ensures that geospatial applications can dynamically scale based on varying workloads such as real-time satellite image processing?",
+    "options": [
+      "Resource Pooling",
+      "Rapid Elasticity",
+      "Broad Network Access",
+      "Measured Service"
+    ],
+    "answer": "Rapid Elasticity",
+    "explanation": "Rapid Elasticity allows spatial cloud to dynamically allocate or release computing resources based on workload demand. This is critical for geospatial tasks like real-time satellite data ingestion, which may suddenly require more compute/storage resources."
+  },
+  {
+    "question": "Which deployment model is most suitable for a government–academic spatial cloud collaboration aimed at environmental monitoring with shared but secure resources?",
+    "options": [
+      "Public Cloud",
+      "Private Cloud",
+      "Community Cloud",
+      "Hybrid Cloud"
+    ],
+    "answer": "Community Cloud",
+    "explanation": "A Community Cloud is best when multiple organizations with shared goals (e.g., government agencies + universities) collaborate. It provides shared infrastructure and resource pooling, but with security and compliance tailored for that group."
+  },
+  {
+    "question": "Which of the following is a major challenge of spatial cloud computing in terms of data management?",
+    "options": [
+      "Lack of virtualization support",
+      "High storage cost of structured data",
+      "Handling large-scale heterogeneous geospatial datasets",
+      "Limited access to network and compute nodes"
+    ],
+    "answer": "Handling large-scale heterogeneous geospatial datasets",
+    "explanation": "Spatial cloud handles massive geospatial data (satellite imagery, LiDAR, GPS streams). The main challenge is heterogeneity (different formats, scales, projections, and resolutions), not just cost or virtualization. Efficient integration and querying of such heterogeneous datasets is a key challenge."
+  },
+  {
+    "question": "Which is a major challenge for Mobile Cloud Computing in 4G networks that is significantly reduced in 5G?",
+    "options": [
+      "High deployment cost of cloud servers",
+      "Limited device battery capacity",
+      "Lack of virtualization technologies",
+      "High round-trip latency between devices and cloud servers"
+    ],
+    "answer": "High round-trip latency between devices and cloud servers",
+    "explanation": "In 4G, the latency between devices and cloud servers was a bottleneck for MCC. 5G’s edge and fog integration reduce this round-trip latency, enabling real-time applications."
+  },
+  {
+    "question": "In MCC with 5G, which combination best explains enhanced Quality of Experience (QoE) for mobile users?",
+    "options": [
+      "Higher bandwidth + Network slicing + Mobile edge computing",
+      "Centralized processing + Increased resource pooling + Lower battery drain",
+      "Virtualization + Cloud-only data storage + Broad network access",
+      "None of these"
+    ],
+    "answer": "Higher bandwidth + Network slicing + Mobile edge computing",
+    "explanation": "5G enables MCC with high bandwidth, network slicing, and edge computing. Together, these reduce delays, allocate resources dynamically, and ensure mobile apps get stable, fast performance, directly enhancing QoE."
+  },
+  {
+    "question": "Which 5G feature combined with MCC is most critical for disaster management and real-time public safety applications?",
+    "options": [
+      "Broad Network Access",
+      "Massive Machine-Type Communications (mMTC)",
+      "Shared Cloud Storage",
+      "On-demand self-service"
+    ],
+    "answer": "Massive Machine-Type Communications (mMTC)",
+    "explanation": "mMTC in 5G allows massive IoT devices (sensors, cameras, drones) to connect simultaneously. When paired with MCC, it supports real-time data collection and cloud-based analytics for disaster management and public safety."
+  },
+  {
+    "question": "In an ITS environment, Vehicle-to-Infrastructure (V2I) communication mainly supports:",
+    "options": [
+      "Social media connectivity inside cars",
+      "Vehicles sharing information with road infrastructure like traffic lights and signals",
+      "Streaming services for passengers",
+      "Offline navigation"
+    ],
+    "answer": "Vehicles sharing information with road infrastructure like traffic lights and signals",
+    "explanation": "V2I enables vehicles to communicate with road infrastructure (signals, tolls, sensors) to optimize routes, reduce congestion, and improve safety."
+  },
+  {
+    "question": "In a Cyber-Physical System (CPS) integrated with cloud computing, what is the primary role of the cloud layer?",
+    "options": [
+      "Direct control of physical devices without feedback",
+      "Storage, processing, and analysis of sensor-generated data for decision-making",
+      "Only providing network connectivity between CPS components",
+      "Replacing all local controllers with a single centralized controller"
+    ],
+    "answer": "Storage, processing, and analysis of sensor-generated data for decision-making",
+    "explanation": "In CPS, physical devices (sensors, actuators, robots) generate vast amounts of data. The cloud layer in CPS provides scalable storage and computational resources, performs analytics, and supports decision-making. It does not directly replace local controllers, but complements them."
+  },
+  {
+    "question": "Mobility Analytics in Smart Cities primarily helps to:",
+    "options": [
+      "Reduce cloud storage costs",
+      "Improve traffic flow and transportation planning",
+      "Replace all physical traffic sensors",
+      "Increase vehicle ownership"
+    ],
+    "answer": "Improve traffic flow and transportation planning",
+    "explanation": "Mobility Analytics uses cloud platforms to analyze vehicle, pedestrian, and sensor data. This helps cities optimize traffic flow, reduce congestion, and plan transportation infrastructure, improving urban mobility."
+  },
+  {
+    "question": "5G Enhanced Mobile Broadband (eMBB) reduces __________ by providing faster and more uniform data rates.",
+    "options": [
+      "network congestion",
+      "cost-per-bit for data transmission",
+      "connectivity for IoT devices",
+      "power efficiency"
+    ],
+    "answer": "cost-per-bit for data transmission",
+    "explanation": "eMBB improves bandwidth efficiency, which lowers the cost-per-bit, making high-data applications like VR, AR, and HD streaming more practical."
+  }
+]
