@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Quiz App</title>
+  <style>
+    /* Body & container */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #333;
+    }
+    .container {
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      width: 90%;
+      max-width: 500px;
+      transition: all 0.3s ease;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #4a3fdd;
+    }
+
+    /* Selector & buttons */
+    select, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    select {
+      border: 1px solid #ccc;
+    }
+    button#startBtn {
+      background: #4a3fdd;
+      color: #fff;
+    }
+    button#startBtn:hover {
+      background: #3629a8;
+    }
+
+    /* Question card */
+    #quiz h2 {
+      background: #f5f5f5;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 18px;
+    }
+    .options button {
+      display: block;
+      width: 100%;
+      margin: 8px 0;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      background: #e0e0e0;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    .options button:hover {
+      background: #c5c5ff;
+    }
+    .options button.correct {
+      background: #4CAF50;
+      color: white;
+    }
+    .options button.wrong {
+      background: #F44336;
+      color: white;
+    }
+
+    /* Explanation */
+    .explanation {
+      background: #f1f1f1;
+      padding: 12px;
+      margin-top: 12px;
+      border-radius: 8px;
+      display: none;
+      animation: fadeIn 0.5s;
+    }
+
+    @keyframes fadeIn {
+      from {opacity:0;}
+      to {opacity:1;}
+    }
+
+    /* Next button */
+    #nextBtn {
+      background: #4a3fdd;
+      color: #fff;
+    }
+    #nextBtn:hover {
+      background: #3629a8;
+    }
+
+    /* Progress bar */
+    .progress-container {
+      width: 100%;
+      background: #e0e0e0;
+      height: 12px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%;
+      background: #4a3fdd;
+      width: 0%;
+      transition: width 0.3s;
+    }
+
+    /* Result */
+    #result p {
+      font-size: 18px;
+      text-align: center;
+      margin: 15px 0;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div id="selector">
+      <h2>Select Number of Questions</h2>
+      <select id="questionCount">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="50">50</option>
+        <option value="80">80</option>
+        <option value="100">100</option>
+        <option value="120">120</option>
+      </select>
+      <button id="startBtn">Start Quiz</button>
+    </div>
+
+    <div id="quiz" style="display:none;">
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      <h2 id="questionText"></h2>
+      <div class="options" id="optionsContainer"></div>
+      <div class="explanation" id="explanation"></div>
+      <button id="nextBtn" style="display:none;">Next Question</button>
+    </div>
+
+    <div id="result" style="display:none;">
+      <h2>Quiz Completed!</h2>
+      <p id="scoreText"></p>
+      <button onclick="location.reload()">Restart Quiz</button>
+    </div>
+  </div>
+
+<script>
+  const select = document.getElementById('questionCount');
+  const startBtn = document.getElementById('startBtn');
+  const selectorDiv = document.getElementById('selector');
+  const quizContainer = document.getElementById('quiz');
+  const questionText = document.getElementById('questionText');
+  const optionsContainer = document.getElementById('optionsContainer');
+  const explanationDiv = document.getElementById('explanation');
+  const nextBtn = document.getElementById('nextBtn');
+  const resultDiv = document.getElementById('result');
+  const scoreText = document.getElementById('scoreText');
+  const progressBar = document.getElementById('progressBar');
+
+  let questions = [];
+  let wrongQuestions = [];
+  let currentIndex = 0;
+  let score = 0;
+  let totalQuestions = 10;
+
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  async function loadAllQuestions() {
+    let allQuestions = [];
+    for (let i = 1; i <= 12; i++) {
+      const response = await fetch(`questions/set${i}.json`);
+      const data = await response.json();
+      allQuestions = allQuestions.concat(data);
+    }
+    return allQuestions;
+  }
+
+  function showQuestion() {
+    const q = questions[currentIndex];
+    questionText.textContent = `${currentIndex + 1}. ${q.question}`;
+    optionsContainer.innerHTML = '';
+    explanationDiv.style.display = 'none';
+    nextBtn.style.display = 'none';
+
+    q.options.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.textContent = opt;
+      btn.onclick = () => checkAnswer(btn, opt, q.answer, q.explanation);
+      optionsContainer.appendChild(btn);
+    });
+
+    progressBar.style.width = `${(currentIndex / totalQuestions) * 100}%`;
+  }
+
+  function checkAnswer(button, selected, correct, explanation) {
+  explanationDiv.style.display = 'block';
+  explanationDiv.innerHTML = `<strong>Correct Answer:</strong> ${correct}<br>${explanation}`;
+  const buttons = optionsContainer.querySelectorAll('button');
+  buttons.forEach(btn => {
+    btn.disabled = true;
+    if (btn.textContent === correct) btn.classList.add('correct');
+    if (btn.textContent === selected && selected !== correct) btn.classList.add('wrong');
+  });
+
+  if (selected === correct) {
+    score++;
+  } else {
+    wrongQuestions.push({
+      question: questions[currentIndex].question,
+      correct: correct,
+      explanation: explanation
+    });
+  }
+
+  nextBtn.style.display = 'block';
+}
+
+
+  nextBtn.onclick = () => {
+  currentIndex++;
+  if (currentIndex < questions.length) {
+    showQuestion();
+  } else {
+    quizContainer.style.display = 'none';
+    resultDiv.style.display = 'block';
+    scoreText.innerHTML = `You scored ${score} out of ${totalQuestions}`;
+
+    if (wrongQuestions.length > 0) {
+      let wrongHtml = `<h3>Review Incorrect Answers:</h3>`;
+      wrongQuestions.forEach((q, idx) => {
+        wrongHtml += `
+          <div style="margin-bottom:12px; padding:10px; border:1px solid #ccc; border-radius:8px; background:#f9f9f9;">
+            <strong>Q${idx + 1}: ${q.question}</strong><br>
+            <strong>Correct Answer:</strong> ${q.correct}<br>
+            <em>${q.explanation}</em>
+          </div>
+        `;
+      });
+      scoreText.innerHTML += wrongHtml;
+    }
+  }
+}
+
+
+  startBtn.onclick = async () => {
+    totalQuestions = parseInt(select.value);
+    selectorDiv.style.display = 'none';
+    quizContainer.style.display = 'block';
+    const allQuestions = await loadAllQuestions();
+    questions = shuffleArray(allQuestions).slice(0, totalQuestions);
+    currentIndex = 0;
+    score = 0;
+    showQuestion();
+  }
+</script>
+
+</body>
+</html>
